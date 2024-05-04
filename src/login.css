@@ -1,0 +1,21 @@
+.login_container{
+	margin: auto;
+	text-align: center;
+	margin-top: 10%;
+	font-weight: bold;
+}
+.login_word{
+	font-weight: bold;
+}
+.login_status{
+	color: orangered;
+	font-weight: bold;
+}
+.login_{
+	margin-top: 2vh;
+	border-radius: 1vh;
+	background-color: lightgreen;
+}
+.password{
+	margin-left: 1vw;
+}

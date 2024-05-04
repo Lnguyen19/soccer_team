@@ -1,0 +1,25 @@
+
+.standings-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.standings-table th,
+.standings-table td {
+  border: 1px solid #ddd;
+  padding: 25px;
+  text-align: center;
+
+}
+.playerImage{
+  height: 30%;
+  width: 30%;
+}
+
+.button{
+   display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 10vh; 
+  padding-left: 20px
+}

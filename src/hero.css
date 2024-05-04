@@ -1,0 +1,50 @@
+.head-container {
+    position: relative; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+     margin-bottom: 20rem;
+}
+
+.background-video {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+   min-height: 600px;
+    height: 80%;
+    object-fit: cover;
+  
+}
+
+.text-section {
+    position: relative; 
+    z-index: 1;
+    max-width: 600px;
+    text-align: center;
+    color: white; 
+    z-index: 1;
+}
+.heroText {
+    font-weight: bold;
+    font-size: 9vh;
+    color: white;
+    letter-spacing: 0.7vh;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 2s steps(20) infinite, cursor 0.4s step-end infinite alternate;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+}
+
+@keyframes cursor {
+    50% {
+        border-color: transparent;
+    }
+}

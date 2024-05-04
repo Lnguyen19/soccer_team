@@ -1,0 +1,42 @@
+.nav {
+  display: flex;
+  align-items: center;
+  background-color: indigo;
+  padding: 2vh 2%;
+  font-family: sans-serif;
+}
+
+.nav_logo {
+  height: 6vh;
+  width: auto;
+  max-width: 100vw;
+   margin-right: 6vw;
+}
+
+.nav_links {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+   margin-right: 6vw;
+}
+
+.nav-link {
+  color: #f2f2f2;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 2.8vh;
+  padding: 1% 3%;
+}
+
+.nav-link:hover {
+  background-color: lightgreen;
+  transform: scale(1.1);
+}
+
+.log_ {
+  margin-right: auto;
+   
+   border-radius: 1vw;
+   min-width:80px;
+   background-color: lightskyblue;
+}

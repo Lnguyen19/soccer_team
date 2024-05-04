@@ -1,0 +1,30 @@
+.signup{
+   font-weight: bold;
+}
+.signup_container{
+	margin: auto;
+	text-align: center;
+}
+.signup-text{
+	font-weight: bold;
+	color: indigo;
+}
+.goToLogin{
+	border-radius: 2vw;
+	background-color: lightgreen;
+	margin-top: 1vh;
+}
+.password-space{
+	margin-top: 2vh;
+}
+.name-space{
+	margin-top: 2vh;
+}
+.admin-space{
+	margin-top: 2vh;
+}
+.signup-message{
+	margin-top: 2vh;
+	font-weight: bold;
+	color: orangered;
+}

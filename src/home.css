@@ -1,0 +1,59 @@
+
+.standing_container{
+    background-image: url('home-1.jpg');
+     background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat; 
+}
+.standings-table  {
+    overflow: auto;
+    position: relative;
+   border-collapse: collapse;
+  max-width: 100%;
+    position: relative; 
+ display: flex;
+ justify-content: center;
+
+
+}
+.standings-table  .headers{
+   background-color: indigo;
+   font-weight: bold;
+   color:white;
+
+}
+
+
+.standings-table .table_ {
+  border: 5px solid blueviolet;
+  padding: 2vh;
+  text-align: center;
+  font-weight: bold;
+  background-color: lightgreen;
+  border-radius: 1vw;
+  box-sizing: border-box;
+  max-width: calc(100% - 4vh);
+  width: 90%;
+
+}
+.standingLabel{
+  margin: 0 auto;
+ text-align: center;
+ margin-bottom: 1vh;
+ font-weight: bold;
+ color: blueviolet;
+  margin-top: 10vh;
+}
+
+.highlighted {
+  background-color: yellow; 
+
+}
+
+.standings-table .table_ tbody tr:hover {
+    background-color: lightskyblue; /* Change background color on hover */
+}
+.standings-table .table_ th,
+.standings-table .table_ td {
+    width: 45%; /* Set width of table cells to 100% */
+}

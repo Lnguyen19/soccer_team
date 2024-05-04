@@ -1,0 +1,18 @@
+
+.standing-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.standing-table th,
+.standing-table td {
+  border: 1px solid #ddd;
+  padding: 25px;
+  text-align: center;
+
+}
+.playerImage{
+  height: 30%;
+  width: 30%;
+}
+
