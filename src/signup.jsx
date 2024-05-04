@@ -31,7 +31,7 @@ else{
 		status = false;
 	}
 	  console.log("Admin status:", admin);
-	axios.post("http://localhost:3001/signup",{email:email, password:password,name:name, admin: status},{withCredentials:true}).then((response)=>{
+	axios.post("https://soccerteam-953874d541a4.herokuapp.com/signup",{email:email, password:password,name:name, admin: status},{withCredentials:true}).then((response)=>{
           console.log(response)
           if(response.data.message==='exist'){
           	setMessage('Error, This email has been used already');

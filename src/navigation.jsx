@@ -13,7 +13,7 @@ const Navigation = () => {
 
 
   useEffect(() => {
-    axios.post('http://localhost:3001/currentSession', {}, { withCredentials: true })
+    axios.post('https://soccerteam-953874d541a4.herokuapp.com/currentSession', {}, { withCredentials: true })
       .then((response) => {
         if (response.data.email) {
           setEmail(response.data.email);
@@ -24,7 +24,7 @@ const Navigation = () => {
         }
       })
       .catch(error => console.log(error));
-     axios.get(`http://localhost:3001/checkAdmin/${email}`, { withCredentials: true })
+     axios.get(`https://soccerteam-953874d541a4.herokuapp.com/checkAdmin/${email}`, { withCredentials: true })
       .then((response) => {
         setUser(response.data);
         console.log("User data:", user);

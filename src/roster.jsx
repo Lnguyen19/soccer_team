@@ -6,7 +6,7 @@ import Navigation from "./navigation";
 const Roster = ()=>{
 	const [roster,setRoster] = useState([]);
 useEffect(()=>{
-	axios.get("http://localhost:3001/getRoster", {withCredentials:true}).then((response)=>{
+	axios.get("https://soccerteam-953874d541a4.herokuapp.com/getRoster", {withCredentials:true}).then((response)=>{
 		if(response.data){
 			console.log("got the data")
 			const sorted = response.data.sort((a,b)=>a._id - b._id);

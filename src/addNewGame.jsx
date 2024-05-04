@@ -10,7 +10,7 @@ const AddNewGame = ()=>{
 	const [text,setText] = useState('');
 	const [title,setTitle] = useState('');
 useEffect(() => { 
-    axios.post('http://localhost:3001/currentSession', {}, { withCredentials: true })
+    axios.post('https://soccerteam-953874d541a4.herokuapp.com/currentSession', {}, { withCredentials: true })
       .then((response) => {
         if (response.data.email) {
           setEmail(response.data.email);
@@ -41,7 +41,7 @@ console.log(choice);
 	postData.append('victory',choice);
 	console.log("post data is ", postData)
 try{
-	 const postResponse = await axios.post('http://localhost:3001/uploadPictures',postData,{
+	 const postResponse = await axios.post('https://soccerteam-953874d541a4.herokuapp.com/uploadPictures',postData,{
  	headers:{'Content-Type': 'multipart/form-data'}});
 	 console.log('the posting data is ', postResponse.data);
  
