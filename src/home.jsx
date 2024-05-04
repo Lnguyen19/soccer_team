@@ -5,7 +5,7 @@ import "./home.css"
 const Home = ()=>{
 const [standings,setStandings] = useState([]);
 useEffect(()=>{
-	axios.get("http://localhost:3001/getStanding", {withCredentials:true}).then((response)=>{
+	axios.get("https://soccerteam-953874d541a4.herokuapp.com/getStanding", {withCredentials:true}).then((response)=>{
 		if(response.data){
 			console.log("got the data")
             const sorted = response.data.sort((a,b)=>a.Rank-b.Rank);

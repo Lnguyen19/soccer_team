@@ -9,7 +9,7 @@ const RecentGames = ()=>{
 	const [recent,setRecent] = useState([]);
 	const navigate = useNavigate();
  useEffect(() => {
-    axios.post('http://localhost:3001/currentSession', {}, { withCredentials: true })
+    axios.post('https://soccerteam-953874d541a4.herokuapp.com/currentSession', {}, { withCredentials: true })
       .then((response) => {
         if (response.data.email) {
           setEmail(response.data.email);
@@ -20,7 +20,7 @@ const RecentGames = ()=>{
         }
       })
       .catch(error => console.log(error));
-      axios.get(`http://localhost:3001/checkAdmin/${email}`, { withCredentials: true })
+      axios.get(`https://soccerteam-953874d541a4.herokuapp.com/checkAdmin/${email}`, { withCredentials: true })
       .then((response) => {
         setUser(response.data);
         console.log("User data:", user);
@@ -33,7 +33,7 @@ const RecentGames = ()=>{
   }, [email,user]);
 
 useEffect(()=>{
-axios.get('http://localhost:3001/getRecent',{withCredentials:true}).then(response=>{
+axios.get('https://soccerteam-953874d541a4.herokuapp.com/getRecent',{withCredentials:true}).then(response=>{
 	if(response.data){
 		setRecent(response.data)
 	console.log(recent)
