@@ -1,3 +1,6 @@
+.standings-table {
+  overflow-x: auto; 
+}
 
 .standing_container{
     background-image: url('home-1.jpg');
@@ -34,7 +37,7 @@
   box-sizing: border-box;
   max-width: calc(100% - 4vh);
   width: 90%;
-
+overflow-x: auto;
 }
 .standingLabel{
   margin: 0 auto;
@@ -51,9 +54,16 @@
 }
 
 .standings-table .table_ tbody tr:hover {
-    background-color: lightskyblue; /* Change background color on hover */
+    background-color: lightskyblue; 
 }
 .standings-table .table_ th,
 .standings-table .table_ td {
-    width: 45%; /* Set width of table cells to 100% */
+    width: 45%; /
+}
+
+@media only screen and (max-width: 768px) {
+  .standings-table .table_ th,
+  .standings-table .table_ td {
+    font-size: 14px; 
+  }
 }
