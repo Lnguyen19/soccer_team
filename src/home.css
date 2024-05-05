@@ -32,13 +32,20 @@
   padding: 2vh;
   text-align: center;
   font-weight: bold;
-  background-color: lightgreen;
+  
   border-radius: 1vw;
   box-sizing: border-box;
   max-width: calc(100% - 4vh);
   width: 90%;
 overflow-x: auto;
 }
+
+.standings-table .table_ table {
+  background-color: lightgreen; 
+  width: 100%; 
+}
+
+
 .standingLabel{
   margin: 0 auto;
  text-align: center;
@@ -58,7 +65,7 @@ overflow-x: auto;
 }
 .standings-table .table_ th,
 .standings-table .table_ td {
-    width: 45%; /
+    width: 45%; 
 }
 
 @media only screen and (max-width: 768px) {
