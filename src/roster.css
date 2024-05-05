@@ -1,39 +1,32 @@
+/* Remove existing table styles */
 .standing-table {
-  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.standing-table th,
-.standing-table td {
+.player-card {
   border: 1px solid #ddd;
-  padding: 10px; /* Adjust padding for better spacing */
-  text-align: center;
-  font-size: 16px; /* Adjust font size for readability */
+  border-radius: 8px;
+  padding: 20px;
+  margin: 10px;
+  width: 250px; /* Set card width */
 }
 
 .playerImage {
-  width: 80px; /* Adjust image size for better visibility */
-  height: auto; /* Maintain aspect ratio */
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.player-info {
+  text-align: center;
+  margin-top: 15px;
 }
 
 /* Responsive styling */
 @media only screen and (max-width: 600px) {
-  .standing-table tbody {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .standing-table tr {
-    margin-bottom: 20px; /* Add space between rows */
-  }
-
-  .standing-table th,
-  .standing-table td {
-    padding: 15px; /* Increase padding for better spacing on smaller screens */
-    font-size: 18px; /* Increase font size for better readability on smaller screens */
-  }
-
-  .playerImage {
-    width: 100px; /* Further adjust image size for smaller screens */
+  .player-card {
+    width: 90%; /* Adjust card width for smaller screens */
   }
 }
