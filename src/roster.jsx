@@ -32,36 +32,6 @@ const picture = (picture)=>{
 
 }
 return(<>
-	<Navigation/>
- <div className="standing-table">
-
-
-{ roster.length===0?(
-<div> 
-<h1>No player listed</h1>
-</div>
-	):roster.map((rosters,index)=>(
-     <div key = {index }className="player-card">
-      <div className="player-image">
-        <img src={picture(rosters.Picture)} alt={player.name} />
-      </div>
-      <div className="player-details">
-        <h2>Name: {rosters.Name}</h2>
-        <p>Kit Number: {rosters.Number}</p>
-        <p>Goal(s): {rosters.Goal}</p>
-        <p>Yellow Card: {rosters.YellowCard}</p>
-        <p>Red Card: {rosters.RedCard}</p>
-        <p>Games Played: {rosters.GamesPlayed}</p>
-        
-      </div>
-    </div>
-))
-
-
-}
-
-
-</div>
 
 	</>)
 
