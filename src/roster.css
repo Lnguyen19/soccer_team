@@ -1,31 +1,39 @@
 .standing-table {
-  border-collapse: collapse;
   width: 100%;
 }
 
 .standing-table th,
 .standing-table td {
   border: 1px solid #ddd;
-  padding: 20px; /* Increase padding for better spacing */
+  padding: 10px; /* Adjust padding for better spacing */
   text-align: center;
   font-size: 16px; /* Adjust font size for readability */
 }
 
 .playerImage {
-  max-width: 100%; /* Ensure the image doesn't overflow its container */
+  width: 80px; /* Adjust image size for better visibility */
   height: auto; /* Maintain aspect ratio */
 }
 
 /* Responsive styling */
 @media only screen and (max-width: 600px) {
+  .standing-table tbody {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .standing-table tr {
+    margin-bottom: 20px; /* Add space between rows */
+  }
+
   .standing-table th,
   .standing-table td {
-    padding: 15px; /* Further increase padding for smaller screens */
+    padding: 8px; /* Further adjust padding for smaller screens */
     font-size: 14px; /* Further reduce font size for smaller screens */
   }
 
   .playerImage {
-    width: 100px; /* Keep image size consistent for smaller screens */
-    height: 100px;
+    width: 60px; /* Further adjust image size for smaller screens */
   }
 }
