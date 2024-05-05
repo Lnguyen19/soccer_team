@@ -11,8 +11,18 @@
   text-align: center;
 
 }
-.playerImage{
-  height: 30%;
-  width: 30%;
+.playerImage {
+  max-width: 100%; 
+  height: auto; 
 }
+@media only screen and (max-width: 600px) {
+  .standing-table th,
+  .standing-table td {
+    padding: 10px; 
+  }
 
+  .playerImage {
+    width: 60px; 
+    height: 60px;
+  }
+}
