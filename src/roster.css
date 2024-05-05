@@ -37,3 +37,34 @@
     width: 100px; /* Further adjust image size for smaller screens */
   }
 }
+.player-card {
+  display: flex;
+  width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+}
+
+.player-image {
+  flex: 1;
+}
+
+.player-image img {
+  width: 100%;
+  height: auto;
+}
+
+.player-details {
+  flex: 2;
+  padding: 20px;
+}
+
+.player-details h2 {
+  margin-top: 0;
+}
+
+.player-details p {
+  margin: 5px 0;
+}
