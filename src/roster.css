@@ -6,8 +6,9 @@
 .standing-table th,
 .standing-table td {
   border: 1px solid #ddd;
-  padding: 15px; /* Adjust padding for smaller screens */
+  padding: 20px; /* Adjust padding for smaller screens */
   text-align: center;
+  font-size: 16px; /* Adjust font size for smaller screens */
 }
 
 .playerImage {
@@ -19,12 +20,12 @@
 @media only screen and (max-width: 600px) {
   .standing-table th,
   .standing-table td {
-    padding: 20px; /* Increase padding for smaller screens */
-    font-size: 12px; /* Reduce font size for smaller screens */
+    padding: 15px; /* Further adjust padding for smaller screens */
+    font-size: 14px; /* Further reduce font size for smaller screens */
   }
 
   .playerImage {
-    width: 80px; /* Increase image size for smaller screens */
-    height: 80px;
+    width: 100px; /* Increase image size for smaller screens */
+    height: 100px;
   }
 }
