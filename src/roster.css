@@ -29,11 +29,11 @@
 
   .standing-table th,
   .standing-table td {
-    padding: 8px; /* Further adjust padding for smaller screens */
-    font-size: 14px; /* Further reduce font size for smaller screens */
+    padding: 15px; /* Increase padding for better spacing on smaller screens */
+    font-size: 18px; /* Increase font size for better readability on smaller screens */
   }
 
   .playerImage {
-    width: 60px; /* Further adjust image size for smaller screens */
+    width: 100px; /* Further adjust image size for smaller screens */
   }
 }
