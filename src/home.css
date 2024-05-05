@@ -1,4 +1,4 @@
- .standings-table {
+.standings-table {
   overflow-x: auto; 
 }
 
@@ -16,7 +16,7 @@
     position: relative; 
  display: flex;
  justify-content: center;
-overflow-x: auto;
+
 
 }
 .standings-table  .headers{
