@@ -11,10 +11,12 @@
     position: absolute; 
     top: 0;
     left: 0;
+    bottom: 30px;
     width: 100%;
    min-height: 600px;
     height: 80%;
     object-fit: cover;
+
   
 }
 

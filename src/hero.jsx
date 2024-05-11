@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import './hero.css'
 import logo from './palabra_logo.JPG';
 import team from "./team_1.jpg";
-import highlight from './highlight.mp4'
+import highlight_3 from "./highlight_3.mp4";
 const Hero = ()=>{
 
 return(<>
@@ -12,7 +12,7 @@ return(<>
 <div class = 'head-container'>
 
 <video autoPlay loop muted className='background-video'>
-                    <source src={highlight} type="video/mp4" />
+                    <source src={highlight_3} type="video/mp4" />
 
                 </video>
 
