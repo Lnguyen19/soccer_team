@@ -33,39 +33,7 @@ const picture = (picture)=>{
 }
 return(<>
 	<Navigation/>
- <div className="standing-table">
-<table>
-  <tr>
-    <th>Photo</th>
-    <th>Name</th>
-    <th>Kit Number</th>
-    <th>Goal(s)</th>
-    <th>Yellow Card</th>
-    <th>Red Card</th>
-    <th>Games Played</th>
-  </tr>
-
-{ roster.length===0?(
-<div> 
-<h1>No player listed</h1>
-</div>
-	):roster.map((rosters,index)=>(
-     <tr key = {index}>
-    <td><img  class = "playerImage"src = {picture(rosters.Picture) }/></td>
-    <td>{rosters.Name}</td>
-    <td>{rosters.Number}</td>
-    <td>{rosters.Goal}</td>
-    <td>{rosters.YellowCard}</td>
-     <td>{rosters.RedCard}</td>
-    <td>{rosters.GamesPlayed}</td>
-  </tr>
-))
-
-
-}
-
-</table>
-</div>
+ 
 
 	</>)
 
