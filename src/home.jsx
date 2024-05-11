@@ -10,8 +10,7 @@ useEffect(()=>{
 			console.log("got the data")
             const sorted = response.data.sort((a,b)=>a.Rank-b.Rank);
 			setStandings(sorted);
-      console.log("the data is ", response.data);
-       console.log("the standing is ", standings);
+    
 }
 		else{
 			console.log("something is wrong");
