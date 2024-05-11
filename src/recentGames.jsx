@@ -91,7 +91,7 @@ return (
     {recent.map((entry, entryIndex) => (
      
       <div key={entryIndex}>
-      <div class = "card">
+      <div class = "card cardColor">
       <div class = 'title_'>
        <label >{entry.title}</label>
        </div>

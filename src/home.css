@@ -40,7 +40,7 @@
 overflow-x: auto;
 }
 
-.standings-table .table_ table {
+.standings-table .table_ {
   background-color: lightgreen; 
   width: 100%; 
 }

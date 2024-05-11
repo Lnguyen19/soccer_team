@@ -33,7 +33,30 @@ const picture = (picture)=>{
 }
 return(<>
 	<Navigation/>
- 
+<div className="card-container">
+    <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        {roster.length === 0 ? (
+            <div className="col">No players</div>
+        ) : roster.map((roster, index) => (
+            <div className="col mb-4" key={index}>
+                <div className="card" style = {{width:"18rem"}}>
+                    <img className="card-img-top" src={picture(roster.Picture)} alt="Player" />
+                    <div className="card-body">
+                        <h5 className="card-title playerName">{roster.Name}</h5>
+                        <p className="card-text">Kit Number: {roster.Number}</p>
+                        <p className="card-text">Goal(s): {roster.Goal}</p>
+                         <p className="card-text">Yellow Cards: {roster.YellowCard}</p>
+                          <p className="card-text">Red Cards: {roster.RedCard}</p>
+                           <p className="card-text">Games Played: {roster.GamesPlayed}</p>
+                    </div>
+                </div>
+            </div>
+        ))}
+    </div>
+</div>
+
+
+
 
 	</>)
 
