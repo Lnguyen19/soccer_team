@@ -53,7 +53,7 @@ const uploadPic = (id) => {
   data.append("Picture", pic);
   console.log(data);
 
-  axios.put('http://localhost:3001/changePicture', data, {
+  axios.put('https://soccerteam-953874d541a4.herokuapp.com/changePicture', data, {
     headers: {
       'Content-Type': 'multipart/form-data' 
     },
