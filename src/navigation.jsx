@@ -27,9 +27,9 @@ const Navigation = () => {
      axios.get(`https://soccerteam-953874d541a4.herokuapp.com/checkAdmin/${email}`, { withCredentials: true })
       .then((response) => {
         setUser(response.data);
-        console.log("User data:", user);
-        console.log("Email:", user.email);
-        console.log("Name:", user.name);
+       // console.log("User data:", user);
+        //console.log("Email:", user.email);
+        //console.log("Name:", user.name);
       })
       .catch(error => console.log(error));
 
