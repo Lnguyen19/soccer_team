@@ -100,7 +100,7 @@ const RecentGames = () => {
     <iframe
        
         src={`https://www.youtube.com/embed/${entry.media[currentIndex[entryIndex]].url}?autoplay=1`}
-       
+        allowFullScreen
       class = 'vids'></iframe>
 </div>
 
