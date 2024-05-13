@@ -116,10 +116,18 @@
     color: indigo;
 }
 .vids {
-    width: 100%; 
+    width: 50vw; 
     max-width: 800px; 
     
     display: block; 
     margin: 0 auto; 
     aspect-ratio: 16 / 9;
+}
+@media screen and (max-width: 600px) {
+    /* Adjust styles for smaller screens */
+    .vids {
+        /* Example adjustments */
+        max-width: 100%; /* Set maximum width to 100% for smaller screens */
+        /* You can add more adjustments as needed */
+    }
 }
