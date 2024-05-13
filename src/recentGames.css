@@ -126,8 +126,23 @@
 @media screen and (max-width: 600px) {
     /* Adjust styles for smaller screens */
     .vids {
-        /* Example adjustments */
-        height: 400px; /* Set a fixed height for smaller screens */
-        /* You can adjust the height value as needed */
+      
+        height: 400px; 
     }
+    .card {
+    max-width: 80vw;
+    width: 100%;
+    height: 150vh;
+    border: 5vw;
+    border: solid;
+    border-radius: 2vh;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease;
+    border-color: indigo;
+    margin: auto;
+    text-align: center;
+}
+
 }
