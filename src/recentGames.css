@@ -127,7 +127,7 @@
     /* Adjust styles for smaller screens */
     .vids {
         /* Example adjustments */
-        height: 200px; /* Set a fixed height for smaller screens */
+        height: 400px; /* Set a fixed height for smaller screens */
         /* You can adjust the height value as needed */
     }
 }
