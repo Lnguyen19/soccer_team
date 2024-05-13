@@ -9,6 +9,14 @@ const AddNewGame = ()=>{
 	const [email,setEmail] = useState('');
 	const [text,setText] = useState('');
 	const [title,setTitle] = useState('');
+  const [addVid, setAddVid] = useState(null);
+  const [vid1,setVid1] = useState('');
+  const [vid2,setVid2] = useState('');
+  const [vid3,setVid3] = useState('');
+  const [vid4,setVid4] = useState('');
+    const [vid5,setVid5] = useState('');
+    const [videos,setVideos] = useState([]);
+
 useEffect(() => { 
     axios.post('https://soccerteam-953874d541a4.herokuapp.com/currentSession', {}, { withCredentials: true })
       .then((response) => {
@@ -39,6 +47,23 @@ console.log(choice);
 	postData.append('text',text);
 	postData.append('title',title);
 	postData.append('victory',choice);
+  if(vid1!=''){
+    videos.push(vid1);
+  }
+  if(vid2!=''){
+    videos.push(vid2);
+  }
+ if(vid3!=''){
+    videos.push(vid3);
+  }
+  if(vid4!=''){
+    videos.push(vid4);
+  }
+   if(vid5!=''){
+    videos.push(vid5);
+  }
+ postData.append('videos',JSON.stringify(videos));
+
 	console.log("post data is ", postData)
 try{
 	 const postResponse = await axios.post('https://soccerteam-953874d541a4.herokuapp.com/uploadPictures',postData,{
@@ -65,6 +90,21 @@ const handleText= (e)=>{
 }
 const handleTitle = (e)=>{
 	setTitle(e.target.value);
+}
+const handleVid1 = (e)=>{
+  setVid1(e.target.value);
+}
+const handleVid2 = (e)=>{
+  setVid2(e.target.value);
+}
+const handleVid3 = (e)=>{
+  setVid3(e.target.value);
+}
+const handleVid4 = (e)=>{
+  setVid4(e.target.value);
+}
+const handleVid5 = (e)=>{
+  setVid5(e.target.value);
 }
 return(<>
 
@@ -97,6 +137,12 @@ return(<>
         />
  <label>No</label>
  </div>
+ <label> Video 1 </label> <input type='text' onChange = {handleVid1}/>
+ <label> Video 2 </label> <input type='text' onChange = {handleVid2}/>
+ <label> Video 3 </label> <input type='text' onChange = {handleVid3}/>
+ <label> Video 4 </label> <input type='text' onChange = {handleVid4}/>
+ <label> Video 5 </label> <input type='text' onChange = {handleVid5}/>
+
  <button class = 'btn btn-primary' onClick = {addEntry}>Add Entry</button>
 </div>
 </>)
