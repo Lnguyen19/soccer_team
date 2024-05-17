@@ -15,14 +15,16 @@ const RecentGames = () => {
         axios.post('https://soccerteam-953874d541a4.herokuapp.com/currentSession', {}, { withCredentials: true })
             .then((response) => {
                 setEmail(response.data.email);
+                console.log('email is ', email)
             })
             .catch(error => console.log(error));
         axios.get(`https://soccerteam-953874d541a4.herokuapp.com/checkAdmin/${email}`, { withCredentials: true })
             .then((response) => {
                 setUser(response.data);
+                   console.log('user is ', user)
             })
             .catch(error => console.log(error));
-    }, [email]);
+    }, [user,email]);
 
     useEffect(() => {
         axios.get('https://soccerteam-953874d541a4.herokuapp.com/getRecent', { withCredentials: true })
@@ -82,7 +84,7 @@ const RecentGames = () => {
                 <div>
                     {recent.map((entry, entryIndex) => (
                         <div key={entryIndex}>
-                            <div className="card cardColor">
+                            <div className="card cardColor card_prop">
                                 <div className='title_'>
                                     <label>{entry.title}</label>
                                 </div>

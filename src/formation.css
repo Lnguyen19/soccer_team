@@ -1,0 +1,60 @@
+
+
+.player_f {
+  width: 15%; 
+  height: 15%; 
+  max-width: 150px; 
+  max-height: 150px;
+  border: 2px solid black;
+  border-radius: 50%; 
+ 
+  position: absolute;
+  margin: 5px;
+  margin-right: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+
+.formation {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url('field2.JPG');
+  height: 110vh;
+  
+  background-size: cover;
+
+}
+@media (max-width: 768px) {
+  .circle {
+    width: 30%; 
+    height: 30%;
+  }
+  .formation{
+    background-size: cover;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .circle {
+    
+    height: 40%; 
+  }
+}
+
+.cardHHeight{
+    height: 30vh;
+}
+
+.finalize{
+    border-radius: 15px;
+    width: 25%;
+    height: 20%;
+     text-align: center;
+    margin: auto 0;
+
+
+
+}

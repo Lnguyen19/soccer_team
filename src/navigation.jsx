@@ -63,6 +63,8 @@ const buttonStatus = (a)=>{
         <a className="nav-link" onClick={() => navigate('/shop')}>Shop</a>
         <a className="nav-link" onClick={() => navigate('/news')}>News</a>
         <a className="nav-link" onClick={() => navigate('/about')}>About</a>
+        <a className="nav-link" onClick={() => navigate('/formation')}>Formation</a>
+
             <button className="log_" onClick={() => buttonStatus(status)}>{status}</button>
       </div>
     

@@ -39,7 +39,7 @@ return(<>
             <div className="col">No players</div>
         ) : roster.map((roster, index) => (
             <div className="col mb-4" key={index}>
-                <div className="card" style = {{width:"18rem"}}>
+                <div className="card cardHeight" style = {{width:"18rem"}}>
                     <img className="card-img-top" src={picture(roster.Picture)} alt="Player" />
                     <div className="card-body">
                         <h5 className="card-title playerName">{roster.Name}</h5>

@@ -13,6 +13,7 @@ import AddGame from "./addNewGame";
 import Shop from "./shop";
 import News from "./news";
 import About from "./about";
+import Formation from "./formation";
 function App() {
 
   return (
@@ -30,7 +31,7 @@ function App() {
                  <Route path = "about" element = {<About/>}/>
                    <Route path = "news" element = {<News/>}/>
                    <Route path = "signup" element = {<Signup/>}/>
-
+                   <Route path = "formation" element = {<Formation/>}/>
 
 
         
