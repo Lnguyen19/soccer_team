@@ -58,3 +58,11 @@
 
 
 }
+.displayPlayerStat{
+     transform: translateY(-50px);
+
+}
+.displayPlayerTopStat{
+     transform: translateX(-50px);
+
+}

@@ -13,11 +13,16 @@ const Formation = () => {
       const [user, setUser] = useState('');
       const [playing,setPlaying] = useState([]);
       const [current,setCurrent] = useState([]);
+      const [toRealMadrid,setToRealMadrid] = useState(false);
    
 
 const [formations,setFormations] = useState([{index:0,x:45,y:30,pos:'ST',name:'NA',kit:0},{index:1,x:20,y:39,pos:'LW',name:'NA',kit:0},{index:2,x:71,y:39,pos:'RW',name:'NA',kit:0},
   {index:3,x:45,y:65,pos:'CM',name:'NA',kit:0}, {index:4,x:25,y:65,pos:'CM',name:'NA',kit:0} , {index:5,x:67,y:65,pos:'CM',name:'NA',kit:0}, {index:6,x:35,y:90,pos:'CB',name:'NA',kit:0}, {index:7,x:17,y:90,pos:'LB',name:'NA',kit:0} , {index:8,x:68,y:90,pos:'RB',name:'NA',kit:0},{index:9,x:52,y:90,pos:'CB',name:'NA',kit:0}, {index:10,x:45,y:107,pos:'GK',name:'NA',kit:0}
   ]);
+const [realMadrid,setRealMadrid] = useState([{index:0,x:45,y:45,pos:'CF',name:'NA',kit:0},{index:1,x:20,y:30,pos:'LW',name:'NA',kit:0},{index:2,x:71,y:30,pos:'RW',name:'NA',kit:0},
+  {index:3,x:45,y:68,pos:'CM',name:'NA',kit:0}, {index:4,x:25,y:68,pos:'CM',name:'NA',kit:0} , {index:5,x:67,y:68,pos:'CM',name:'NA',kit:0}, {index:6,x:35,y:90,pos:'CB',name:'NA',kit:0}, {index:7,x:17,y:90,pos:'LB',name:'NA',kit:0} , {index:8,x:68,y:90,pos:'RB',name:'NA',kit:0},{index:9,x:52,y:90,pos:'CB',name:'NA',kit:0}, {index:10,x:45,y:107,pos:'GK',name:'NA',kit:0}
+  ]);
+
     var x1 = 45;
     var y1 = 25;
      var x2 = 28;
@@ -64,9 +69,10 @@ useEffect(()=>{
 },[]);
 useEffect(()=>{  axios.get("https://soccerteam-953874d541a4.herokuapp.com/formation",{withCredentials:true}).then((response)=>{
   if(response.data){
-    
-    setCurrent(response.data);
+     const sorted = response.data.sort((a,b)=>a.index - b.index);
+    setCurrent(sorted);
     console.log('current', current)
+
     
   }
   else {
@@ -156,13 +162,21 @@ const handleName = (name, index)=>{
   return (
     <>
       <Navigation />
-      <div className='formation'>
+      {toRealMadrid===true?(<div className = 'formation'>
+        {realMadrid.map((forma,index)=>(
+           <div key = {index} class = 'player_f' style = {{left:`${forma.x}%`, top:`${forma.y}%` ,backgroundImage :handleBackground(handleName(forma.name,index))}}><div class = {index===2||index===3?"displayPlayerTopStat":"displayPlayerStat"}>{forma.pos} <p>{handleName(forma.name,index)}</p> </div></div>
+        ))}
+
+      </div>):(<div className='formation'>
        {formations.map((forma,index)=>(
-           <div key = {index} class = 'player_f' style = {{left:`${forma.x}%`, top:`${forma.y}%` ,backgroundImage :handleBackground(handleName(forma.name,index))}}>{forma.pos} <p>{handleName(forma.name,index)}</p></div>
+           <div key = {index} class = 'player_f' style = {{left:`${forma.x}%`, top:`${forma.y}%` ,backgroundImage :handleBackground(handleName(forma.name,index))}}> <div class = {index===2||index===3?"displayPlayerTopStat":"displayPlayerStat"}>{forma.pos} <p>{handleName(forma.name,index)}</p> </div></div>
         ))}
       
    
-      </div>
+      </div>)}
+
+
+      <button onClick = {()=>setToRealMadrid(!toRealMadrid)}>Switch Formation</button>
      <div>
     {user.admin===true?(<div className="card-container">
     <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
@@ -184,6 +198,7 @@ const handleName = (name, index)=>{
         ))}
 
     </div>
+
     <button class = 'finalize btn-primary' onClick = {()=>submit(formations)}><h1 style = {{fontWeight:'bold'}}>Finalize </h1></button>
 </div>):(<div>user is not the admin  </div>)}
   

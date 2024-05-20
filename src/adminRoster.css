@@ -23,3 +23,16 @@
   height: 10vh; 
   padding-left: 20px
 }
+.roster-input{
+  width: 55%;
+
+}
+.roster-submit{
+  width: 55%;
+  background-color: indigo;
+  color: white;
+  
+}
+.picture-submit{
+  border-radius: 5px;
+}

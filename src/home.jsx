@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import "./home.css"
 const Home = ()=>{
 const [standings,setStandings] = useState([]);
+const [dataTable,setDataTable ] = useState([]);
 useEffect(()=>{
 	axios.get("https://soccerteam-953874d541a4.herokuapp.com/getStanding", {withCredentials:true}).then((response)=>{
 		if(response.data){
@@ -20,6 +21,8 @@ useEffect(()=>{
 	});
 
 },[]);
+
+
 return(<>
 <div >
   <h1 class = 'standingLabel'>Current Standing</h1>
