@@ -164,12 +164,12 @@ const handleName = (name, index)=>{
       <Navigation />
       {toRealMadrid===true?(<div className = 'formation'>
         {realMadrid.map((forma,index)=>(
-           <div key = {index} class = 'player_f' style = {{left:`${forma.x}%`, top:`${forma.y}%` ,backgroundImage :handleBackground(handleName(forma.name,index))}}><div class = {index===2||index===3?"displayPlayerTopStat":"displayPlayerStat"}>{forma.pos} <p>{handleName(forma.name,index)}</p> </div></div>
+           <div key = {index} class = 'player_f' style = {{left:`${forma.x}%`, top:`${forma.y}%` ,backgroundImage :handleBackground(handleName(forma.name,index))}}><div class = {index===1||index===2?"displayPlayerTopStat":"displayPlayerStat"}>{forma.pos} <p>{handleName(forma.name,index)}</p>  <p>index</p></div></div>
         ))}
 
       </div>):(<div className='formation'>
        {formations.map((forma,index)=>(
-           <div key = {index} class = 'player_f' style = {{left:`${forma.x}%`, top:`${forma.y}%` ,backgroundImage :handleBackground(handleName(forma.name,index))}}> <div class = {index===2||index===3?"displayPlayerTopStat":"displayPlayerStat"}>{forma.pos} <p>{handleName(forma.name,index)}</p> </div></div>
+           <div key = {index} class = 'player_f' style = {{left:`${forma.x}%`, top:`${forma.y}%` ,backgroundImage :handleBackground(handleName(forma.name,index))}}> <div class = {index===1||index===2?"displayPlayerTopStat":"displayPlayerStat"}>{forma.pos} <p>{handleName(forma.name,index)} <p>{index}</p></p> </div></div>
         ))}
       
    
