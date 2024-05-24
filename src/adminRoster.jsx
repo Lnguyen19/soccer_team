@@ -223,7 +223,7 @@ return(<>
                            <p className="card-text">Games Played:  {edit===true?(<><input  class = 'roster-input'type = 'number' onClick = {(e)=>setGamesPlayed(e.target.value)}/><button class = 'roster-submit' onClick = {()=>editGamesPlayed(rosters.Name,gamesPlayed)}>Submit</button></>):(<label>{rosters.GamesPlayed}</label>)}</p>
                            {editPicture===true?(<input type = 'file' onChange = {(e)=>setPic(e.target.files[0])}/>):(<div> </div>)}
 
-{editPicture===true?(<button  class = 'picture-submit btn-success'onClick = {()=>uploadPic(roster.Name)}>Submit</button>):(<div> </div>)}
+{editPicture===true?(<button  class = 'picture-submit btn-success'onClick = {()=>uploadPic(rosters.Name)}>Submit</button>):(<div> </div>)}
                     </div>
                 </div>
             </div>
